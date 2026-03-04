@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Alquiler</title>
+</head>
+<body>
+    
+    <h1>Alquiler de computadores</h1>
+
+
+    <div class="contenedor">
+
+        <label><strong>Número de equipos (mínimo 2)</strong></label>
+        <input type="number" id="equipos" min="2">
+
+        <br><br>
+
+        <label><strong>Días iniciales</strong></label>
+        <input type="number" id="dias" min="1">
+
+        <br><br>
+
+        <label><strong>Días adicionales</strong></label>
+        <input type="number" id="diasAdicionales" min="0" value="0">
+
+        <br><br>
+
+        <label><strong>Tipo de alquiler</strong></label>
+        <select id="opcion">
+            <option value="1">Dentro de la ciudad</option>
+            <option value="2">Fuera de la ciudad</option>
+            <option value="3">Dentro del establecimiento</option>
+        </select>
+
+        <br><br>
+
+        <button type="button" onclick="calcular()"><strong>Calcular Factura</strong></button>
+
+        <br><br>
+
+        <div id="resultado"></div>
+    </div>
+
+
+
+<script src="main.js"></script>
+
+
+</body>
+</html>
