@@ -14,8 +14,6 @@ function calcular(){
     var subtotalInicial;
     var subtotalAdicional;
     var descuentoAdicional;
-    var valorDescuentoAdicional = 0;
-    var valorDescuentoOIncremento = 0;
     var total;
     var mensaje;
 
@@ -36,19 +34,16 @@ function calcular(){
         descuentoAdicional = 0.20;
     }
 
-    valorDescuentoAdicional = subtotalAdicional * descuentoAdicional;
-    subtotalAdicional = subtotalAdicional - valorDescuentoAdicional;
+    subtotalAdicional = subtotalAdicional - (subtotalAdicional * descuentoAdicional);
 
     total = subtotalInicial + subtotalAdicional;
 
     if(opcion == "2"){
-    valorDescuentoOIncremento = total * 0.05;
-    total = total + valorDescuentoOIncremento;
+        total = total + (total * 0.05);
         mensaje = "Incremento del 5% por servicio fuera de la ciudad.";
     }
     else if(opcion == "3"){
-    valorDescuentoOIncremento = total * 0.05;
-    total = total - valorDescuentoOIncremento;
+        total = total - (total * 0.05);
         mensaje = "Descuento del 5% por alquiler en el establecimiento.";
     }
     else{
